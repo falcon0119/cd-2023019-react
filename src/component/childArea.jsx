@@ -1,13 +1,27 @@
-export const ChildArea = (props) => {
+import { memo } from "react";
+
+const style = {
+  backgroundColor: "gray",
+  height: "300px",
+  textAlign: "center",
+  width: "100%",
+};
+
+export const ChildArea = memo((props) => {
   const { open } = props;
+  const data = [...Array(2000).keys()];
+  data.forEach(() => {
+    console.log("...");
+  });
   return (
     <>
       {open ? (
-        <div>
+        <div style={style}>
           {" "}
           <p>子コンポーネント</p>
+          <button>閉じる</button>
         </div>
       ) : null}
     </>
   );
-};
+});

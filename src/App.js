@@ -11,13 +11,13 @@ export default function App() {
 
   return (
     <>
-      <dev class="counter">
+      <div class="counter">
         <h1>表示切り替え</h1>
         <input value={text} onChange={onChangetext} />
         <br />
         <button onClick={onClickchange}>表示</button>
         <ChildArea open={open} />
-      </dev>
+      </div>
     </>
   );
 }
