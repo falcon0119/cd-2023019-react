@@ -8,6 +8,7 @@ export default function App() {
   const [open, setopen] = useState(false);
   const onChangetext = (e) => settext(e.target.value);
   const onClickchange = () => setopen(!open);
+  const onClickClose = () => setopen(false);
 
   return (
     <>
@@ -16,7 +17,7 @@ export default function App() {
         <input value={text} onChange={onChangetext} />
         <br />
         <button onClick={onClickchange}>表示</button>
-        <ChildArea open={open} />
+        <ChildArea open={open} onClickClose={onClickClose} />
       </div>
     </>
   );
