@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 const style = {
-  backgroundColor: "gray",
+  backgroundColor: "#589A8D",
   height: "300px",
   textAlign: "center",
   width: "100%",
